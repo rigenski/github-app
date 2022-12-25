@@ -14,7 +14,7 @@ const CardUser = () => {
               <div className="mx-auto mb-4 w-32 md:mr-8 md:mx-0 md:mb-0">
                 {user ? (
                   <img
-                    src={user.avatar_url}
+                    src={user?.avatar_url}
                     alt=""
                     className="w-32 h-32 rounded-full"
                   />
@@ -33,19 +33,19 @@ const CardUser = () => {
                     Full Name
                   </p>
                   <h4 className="text-lg font-medium text-slate-800">
-                    {user ? user.name ?? "-" : "-"}
+                    {user?.name ?? "-"}
                   </h4>
                 </div>
                 <div className="mb-1">
                   <p className="text-xs font-normal text-slate-400">Username</p>
                   <h6 className="text-sm font-medium text-slate-800">
-                    {user ? user.login ?? "-" : "-"}
+                    {user?.login ?? "-"}
                   </h6>
                 </div>
                 <div className="mb-1">
                   <p className="text-xs font-normal text-slate-400">Bio</p>
                   <h6 className="text-sm font-medium text-slate-800">
-                    {user ? user.bio ?? "-" : "-"}
+                    {user?.bio ?? "-"}
                   </h6>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const CardUser = () => {
                     className="text-slate-400 mr-2"
                   />
                   <h6 className="text-sm font-medium text-slate-800">
-                    {user ? user.location ?? "-" : "-"}
+                    {user?.location ?? "-"}
                   </h6>
                 </div>
                 <div className="mb-2 flex items-center">
@@ -72,7 +72,7 @@ const CardUser = () => {
                     className="text-slate-400 mr-2"
                   />
                   <h6 className="text-sm font-medium text-slate-800">
-                    {user ? user.blog ?? "-" : "-"}
+                    {user?.blog ?? "-"}
                   </h6>
                 </div>
                 <div className="mb-2 flex items-center">
@@ -83,7 +83,7 @@ const CardUser = () => {
                     className="text-slate-400 mr-2"
                   />
                   <h6 className="text-sm font-medium text-slate-800">
-                    {user ? user.twitter_username ?? "-" : "-"}
+                    {user?.twitter_username ?? "-"}
                   </h6>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const CardUser = () => {
               <div className="mr-0 flex justify-between items-center lg:mr-8">
                 <div className="mr-4">
                   <h2 className="text-3xl font-medium text-slate-800 text-center">
-                    {user ? user.followers ?? "0" : "0"}
+                    {user?.followers ?? "0"}
                   </h2>
                   <p className="text-xs font-normal text-slate-400 text-center">
                     Followers
@@ -100,7 +100,7 @@ const CardUser = () => {
                 </div>
                 <div className="ml-4">
                   <h2 className="text-3xl font-medium text-slate-800 text-center">
-                    {user ? user.following ?? "0" : "0"}
+                    {user?.following ?? "0"}
                   </h2>
                   <p className="text-xs font-normal text-slate-400 text-center">
                     Following

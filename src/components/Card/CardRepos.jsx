@@ -30,7 +30,7 @@ const CardRepos = () => {
             <button
               className="mb-2 p-4 w-72 flex flex-wrap justify-between items-start bg-white rounded-md shadow-sm md:p-0 md:w-full md:flex-nowrap md:items-center"
               key={index}
-              onClick={() => window.open(item.html_url, "_blank")}
+              onClick={() => window.open(item?.html_url, "_blank")}
             >
               <div className="w-full mb-2 p-0 text-sm text-slate-800 text-left md:w-72 md:mb-0 md:px-6 md:py-4">
                 <div className="flex items-center">
@@ -44,7 +44,7 @@ const CardRepos = () => {
                   </div>
                   <div className="ml-2">
                     <h6 className="mb-0.5 text-sm font-medium text-slate-800 whitespace-nowrap">
-                      {item ? item.name.substring(0, 24) ?? "-" : "-"}
+                      {item ? item?.name?.substring(0, 24) ?? "-" : "-"}
                     </h6>
                     <div className="flex items-center">
                       <Icon
@@ -65,7 +65,7 @@ const CardRepos = () => {
                   Fork
                 </p>
                 <p className="text-sm font-normal text-slate-800 whitespace-nowrap">
-                  {item ? item.forks ?? "-" : "-"}
+                  {item ? item?.forks ?? "-" : "-"}
                 </p>
               </div>
               <div className="w-6/12 mb-2 p-0 text-left md:w-48 md:mb-0 md:px-6 md:py-4">
@@ -73,7 +73,7 @@ const CardRepos = () => {
                   Language
                 </p>
                 <p className="text-sm font-normal text-slate-800 whitespace-nowrap">
-                  {item ? item.language ?? "-" : "-"}
+                  {item ? item?.language ?? "-" : "-"}
                 </p>
               </div>
               <div className="w-6/12 p-0 text-left md:w-36 md:px-6 md:py-4">
@@ -81,7 +81,7 @@ const CardRepos = () => {
                   Pushed At
                 </p>
                 <p className="text-sm font-normal text-slate-800 whitespace-nowrap">
-                  {item ? item.pushed_at.substring(0, 10) ?? "-" : "-"}
+                  {item ? item?.pushed_at?.substring(0, 10) ?? "-" : "-"}
                 </p>
               </div>
               <div className="w-6/12 p-0 text-left md:w-24 md:px-6 md:py-4">
@@ -96,7 +96,7 @@ const CardRepos = () => {
                     className="text-yellow-400 mr-2"
                   />
                   <p className="text-sm font-normal text-slate-800 whitespace-nowrap">
-                    {item ? item.stargazers_count ?? "-" : "-"}
+                    {item ? item?.stargazers_count ?? "-" : "-"}
                   </p>
                 </div>
               </div>
